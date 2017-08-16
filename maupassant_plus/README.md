@@ -1,3 +1,12 @@
+##Modified features:
+1.instantclick applied
+2.support mathjax & prismjs, compatatebale issues fixed.
+3.table style fixed, title style redesigned, changed some button style.
+
+demo:http://codinghare.com
+
+orginal copy right info is showing as below.
+==========
 maupassant
 ==========
 
