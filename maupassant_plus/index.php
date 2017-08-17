@@ -19,7 +19,7 @@
 					</h1>
 				</header>
 				<date class="post-meta">
-					<?php $this->date('F j, Y'); ?>
+					<span class= "icon-table2"> </span><?php $this->date('F j, Y'); ?>
 				</date>
 				<div class="post-content">
 					<?php $this->content('Read More &raquo'); ?>

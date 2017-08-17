@@ -8,6 +8,8 @@
 	</div>
 </footer>
 <?php $this->footer(); ?>
+
+/* Instant Click */
 <script src="<?php $this->options->themeUrl('javascript/instantclick.min.js'); ?>" data-no-instant></script>
 <script data-no-instant>
     InstantClick.on('change', function(isInitialLoad) {
@@ -24,5 +26,7 @@ var pres = document.getElementsByTagName('pre');
                 ga('send', 'pageview', location.pathname + location.search);
         }
     });InstantClick.init('mousedown');</script>
+
+
 </body>
 </html>

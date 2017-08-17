@@ -65,4 +65,19 @@
         </ul>
 	</section>
     <?php endif; ?>
+        <section class="widget">
+		<h3 class="widget-title"><?php _e('Features'); ?></h3>
+        <ul class="widget-list">
+            <li><span class= "icon-home"> </span><a href="http://yugu.me"</a>Main Sites</li>
+            <li><span class= "icon-stack"> </span><a href="http://gup.org"</a>My Projects</li>
+            <li><span class= "icon-pencil2"> </span><a href="http://2222.sb"</a>My Wiki</li>
+            
+        </ul>
+      <div class="social-wrapper">
+      <a class="icon-vimeo" target="_blank" href="https://vimeo.com/guyu/"></a>
+      <a class="icon-github" target="_blank" href="https://github.com/CodingHare"></a>
+      <a class="icon-flickr3" target="_blank" href="https://www.flickr.com/photos/126251539@N07"></a>
+      <a class="icon-linkedin" target="_blank" href="#"></a>
+    </div>
+	</section>
 </div>
