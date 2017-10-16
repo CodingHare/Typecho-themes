@@ -68,17 +68,11 @@
         <section class="widget">
 		<h3 class="widget-title"><?php _e('Features'); ?></h3>
         <ul class="widget-list">
-            <li><span class= "icon-home"> </span><a href="http://yugu.me"</a>Main Sites</li>
-            <li><span class= "icon-stack"> </span><a href="http://gup.org"</a>My Projects</li>
-            <li><span class= "icon-books"> </span><a href="http://ygwiki.com"</a>My Wiki</li>
-            <li><span class= "icon-profile"> </span><a href="http://me.gup.org"</a>My Demo & CV</li>
-            
+            <li><a href="<?php $this->options->feedUrl(); ?>"><?php _e('Subscribe'); ?></a></li>
+            <li><a href="http://yugu.me"</a>Main Site</li>
+            <li><a href="http://gup.org"</a>My Projects</li>
+            <li><a href="http://ygwiki.com"</a>My Wiki</li>
         </ul>
-      <div class="social-wrapper">
-      <a class="icon-vimeo" target="_blank" href="<?php $this->options->socialvimeo();?>"></a>
-      <a class="icon-github" target="_blank" href="<?php $this->options->socialgithub();?>"></a>
-      <a class="icon-flickr3" target="_blank" href="<?php $this->options->socialflickr();?>"></a>
-      <a class="icon-linkedin" target="_blank" href="#"></a>
-    </div>
+     
 	</section>
 </div>

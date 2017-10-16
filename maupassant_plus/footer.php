@@ -11,6 +11,8 @@
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    showProcessingMessages: false, //关闭js加载过程信息
+    messageStyle: "none", //不显示信息 
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
@@ -22,9 +24,11 @@
   });
 </script>
 
+
 <script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
 
 <script src="<?php $this->options->themeUrl('javascript/instantclick.min.js'); ?>" data-no-instant></script>
 <script data-no-instant>
@@ -42,7 +46,5 @@ var pres = document.getElementsByTagName('pre');
                 ga('send', 'pageview', location.pathname + location.search);
         }
     });InstantClick.init('mousedown');</script>
-
-
 </body>
 </html>

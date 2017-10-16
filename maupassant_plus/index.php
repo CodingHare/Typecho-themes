@@ -9,6 +9,7 @@
  */
  $this->need('header.php');
  ?>
+
 <div class="col-8" id="main">
 	<div class="res-cons">
 		<?php while($this->next()): ?>

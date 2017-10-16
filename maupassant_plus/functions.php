@@ -21,3 +21,53 @@ function themeConfig($form) {
 
     $form->addInput($sidebarBlock->multiMode());
 }
+
+//时间转换输出
+function timesince($older_date,$comment_date = false) {
+$chunks = array(
+array(86400 , 'Day'),
+array(3600 , 'Hour'),
+array(60 , 'Minute'),
+array(1 , 'Second'),
+);
+$newer_date = time();
+$since = abs($newer_date - $older_date);
+
+for ($i = 0, $j = count($chunks); $i < $j; $i++){
+$seconds = $chunks[$i][0];
+$name = $chunks[$i][1];
+if (($count = floor($since / $seconds)) != 0) break;
+}
+if ($count == 1) {
+$output = $count.' '.$name.' '.'ago';
+}
+else {$output = $count.' '.$name.'s'.' '.'ago'; }
+return $output;
+}
+
+//获取评论的锚点链接
+function get_comment_at($coid)
+{
+    $db   = Typecho_Db::get();
+    $prow = $db->fetchRow($db->select('parent')->from('table.comments')
+                                 ->where('coid = ? AND status = ?', $coid, 'approved'));
+    $parent = $prow['parent'];
+    if ($parent != "0") {
+        $arow = $db->fetchRow($db->select('author')->from('table.comments')
+                                     ->where('coid = ? AND status = ?', $parent, 'approved'));
+        $author = $arow['author'];
+        $href   = '<a href="#comment-' . $parent . '">@' . $author . '</a>';
+        echo $href;
+    } else {
+        echo '';
+    }
+}
+//输出评论内容
+function get_filtered_comment($coid){
+    $db   = Typecho_Db::get();
+    $rs=$db->fetchRow($db->select('text')->from('table.comments')
+                                 ->where('coid = ? AND status = ?', $coid, 'approved'));
+    $content=$rs['text'];
+    echo $content;
+}
+?>
