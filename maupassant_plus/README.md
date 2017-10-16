@@ -18,8 +18,11 @@
 
 
 #### Demo: http://codinghare.com
-本目录附带了修改过的 tableofcontent / Prismjs 的插件，请自行添加到 `/usr/plugin` 目录中。
-本主题遵循 MIT 协议。
+
+### 注意事项
+ - `Plugin` 目录中附带了修改过的 tableofcontent / Prismjs 的插件，请自行添加到 `/usr/plugin` 目录中。
+ - 原生垃圾评论过滤已经关闭，使用的是第三方的 smartspam，未来考虑添加 无 jquery 的 ajax 评论支持。
+ - 本主题遵循 MIT 协议。
 
 原主题相关信息如下：
 
